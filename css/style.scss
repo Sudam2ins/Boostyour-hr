@@ -3,6 +3,16 @@
 @import 'mixins.scss';
 
 @font-face {
+	font-family:'proxima-nova-regular';
+	src: url('sitefont/proxima-nova-regular.eot');
+	src: url('sitefont/proxima-nova-regular.eot?#iefix') format('embedded-opentype'),
+	url('sitefont/proxima-nova-regular.woff') format('woff'),
+	url('sitefont/proxima-nova-regular.ttf') format('truetype'),
+	url('sitefont/proxima-nova-regular.svg#proxima_nova_altblack') format('svg');
+
+}
+
+@font-face {
 	font-family:'proxima-nova-bold';
 	src: url('sitefont/proxima-nova-bold.eot');
 	src: url('sitefont/proxima-nova-bold.eot?#iefix') format('embedded-opentype'),
@@ -12,32 +22,11 @@
 	url('sitefont/proxima-nova-bold.svg#proxima_nova_altblack') format('svg');
 
 }
-@font-face {
-	font-family:'proxima-nova-regular';
-	src: url('sitefont/proxima-nova-regular.eot');
-	src: url('sitefont/proxima-nova-regular.eot?#iefix') format('embedded-opentype'),
-	url('sitefont/proxima-nova-regular.woff') format('woff'),
-	url('sitefont/proxima-nova-regular.ttf') format('truetype'),
-	url('sitefont/proxima-nova-regular.svg#proxima_nova_altblack') format('svg');
 
-}
-@font-face {
-	font-family:'proxima-nova-semibold';
-	src: url('sitefont/proxima-nova-semibold.eot');
-	src: url('sitefont/proxima-nova-semibold.eot?#iefix') format('embedded-opentype'),
-	url('sitefont/proxima-nova-semibold.woff2') format('woff2'),
-	url('sitefont/proxima-nova-semibold.ttf') format('truetype'),
-	url('sitefont/proxima-nova-semibold.svg#proxima_nova_altblack') format('svg');
-}
-@font-face {
-	font-family:'proxima-nova-thin';
-	src: url('sitefont/proxima-nova-thin');
-	src: url('sitefont/proxima-nova-thin.eot?#iefix') format('embedded-opentype'),
-	url('sitefont/proxima-nova-thin.woff2') format('woff2'),
-	url('sitefont/proxima-nova-thin.woff') format('woff'),
-	url('sitefont/proxima-nova-thin.ttf') format('truetype'),
-	url('sitefont/proxima-nova-thin.svg#proxima_nova_altblack') format('svg');
-}
+
+
+
+
 
 *,
 *:before,
@@ -605,6 +594,7 @@ label{
 				//font-weight: 600;
 				font-family:'proxima-nova-regular';
 				
+				
 			}
 		}
 		.bc-text{
@@ -631,11 +621,48 @@ label{
 		z-index: 1;
 	}
 }
+.two-column-listing{
+	padding: 0;
+	.tcl-content{
+		margin-top: -80px;
+		padding-top: 50px;
+		padding-left: 50px;
+		position: relative;
+		z-index: 3;
+		background-color:#ffffff;
+		.tclc-column{
+			.tclcc-title{
+				margin-bottom: 30px;
+				h3{
+					margin: 0;
+					font-size: 20px;
+					color:$theme-164498;
+
+				}
+			}
+			.tclcc-list{
+				ul{
+					li{
+						a{
+							font-size: 17px;
+							span{
+								color:$theme-164498;
+								margin-right: 10px;
+								font-size: 20px;
+								vertical-align: middle;	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 .title-text-right-image{
 	
 	padding: 0 0 150px;
 	.ttri-content{
-		margin-top: -80px;
+		//margin-top: -80px;
 		position: relative;
 		z-index: 3;
 		
@@ -847,7 +874,7 @@ label{
 			background-color: $theme-ffffff;
 			padding-top: 35px;
 			height: 460px;
-			font-family:'proxima-nova-regular';
+			//font-family:'proxima-nova-regular';
 			.afd-logo{
 				padding-left: 15px;
 				margin-bottom: 40px;
@@ -856,46 +883,85 @@ label{
 				padding-left: 40px;
 			}
 		}
-		
-		.form-group{
-			position: relative;
-			.form-control{
-				border-radius: 0;
-				font-size: 12px;
-				height: 65px;
-				border:none;
-				box-shadow: none;
+	}
+	.form-group{
+		position: relative;
+		.form-control{
+			border-radius: 0;
+			font-size: 12px;
+			height: 65px;
+			border:none;
+			box-shadow: none;
+		}
+		.check-box{
+			margin-bottom: 15px;
+		}
+		.text-area{
+			height: 225px;
+			padding-top: 22px;
+		}
+
+		.action-btn{
+			background-color: transparent;
+			border: 1px solid $theme-ffffff;
+			height: 65px;
+			width: 270px;
+			font-size: 22px;
+			font-weight: 700;
+			color:$theme-ffffff;
+			text-transform: uppercase;
+			@media (max-width: 767px){
+				float: none !important;
+				display: table;
+				margin:20px auto 0;
 			}
-			.text-area{
-				height: 225px;
-				padding-top: 22px;
-			}
-			.linkedin-profile{
-				position: relative;
-				i{
-					position: absolute;
-					top: 50%;
+		}
+		span{
+			color:$theme-ffffff;
+			font-size: 14px;
+			padding-left: 3px;
+
+		}
+
+
+	}
+	.form-action{
+		margin-bottom: 0;
+	}
+	.linkedin-profile{
+		position: relative;
+		.lp-img{
+			position: absolute;
+			padding-top: 8px;
+			padding-left: 8px;
+			top:50%;
+		}
+		.lp-fc{
+			padding-left: 70px;
+		}
+		.action-btn{
+			margin-bottom: 15px;
+		}
+	}
+}
+.footer{
+	padding: 10px;
+	.footer-menu{
+		ul{
+			li{
+				margin-right: 15px;
+				a{
+					//font-family:'proxima-nova-regular';
+					padding: 10px;
+					
+
+					
 				}
-			}
-			.action-btn{
-				background-color: transparent;
-				border: 1px solid $theme-ffffff;
-				height: 65px;
-				width: 270px;
-				font-size: 22px;
-				font-weight: 700;
-				color:$theme-ffffff;
-				text-transform: uppercase;
-				@media (max-width: 767px){
-					float: none !important;
-					display: table;
-					margin:20px auto 0;
+				&:first-child{
+					a{
+						padding-left: 0;
+					}
 				}
-			}
-			span{
-				color:$theme-ffffff;
-				font-size: 14px;
-				padding-left: 3px;
 			}
 		}
 	}

@@ -1,20 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
 @font-face {
-  font-family: 'proxima-nova-bold';
-  src: url("sitefont/proxima-nova-bold.eot");
-  src: url("sitefont/proxima-nova-bold.eot?#iefix") format("embedded-opentype"), url("sitefont/proxima-nova-bold.woff2") format("woff2"), url("sitefont/proxima-nova-bold.woff") format("woff"), url("sitefont/proxima-nova-bold.ttf") format("truetype"), url("sitefont/proxima-nova-bold.svg#proxima_nova_altblack") format("svg"); }
-@font-face {
   font-family: 'proxima-nova-regular';
   src: url("sitefont/proxima-nova-regular.eot");
   src: url("sitefont/proxima-nova-regular.eot?#iefix") format("embedded-opentype"), url("sitefont/proxima-nova-regular.woff") format("woff"), url("sitefont/proxima-nova-regular.ttf") format("truetype"), url("sitefont/proxima-nova-regular.svg#proxima_nova_altblack") format("svg"); }
 @font-face {
-  font-family: 'proxima-nova-semibold';
-  src: url("sitefont/proxima-nova-semibold.eot");
-  src: url("sitefont/proxima-nova-semibold.eot?#iefix") format("embedded-opentype"), url("sitefont/proxima-nova-semibold.woff2") format("woff2"), url("sitefont/proxima-nova-semibold.ttf") format("truetype"), url("sitefont/proxima-nova-semibold.svg#proxima_nova_altblack") format("svg"); }
-@font-face {
-  font-family: 'proxima-nova-thin';
-  src: url("sitefont/proxima-nova-thin");
-  src: url("sitefont/proxima-nova-thin.eot?#iefix") format("embedded-opentype"), url("sitefont/proxima-nova-thin.woff2") format("woff2"), url("sitefont/proxima-nova-thin.woff") format("woff"), url("sitefont/proxima-nova-thin.ttf") format("truetype"), url("sitefont/proxima-nova-thin.svg#proxima_nova_altblack") format("svg"); }
+  font-family: 'proxima-nova-bold';
+  src: url("sitefont/proxima-nova-bold.eot");
+  src: url("sitefont/proxima-nova-bold.eot?#iefix") format("embedded-opentype"), url("sitefont/proxima-nova-bold.woff2") format("woff2"), url("sitefont/proxima-nova-bold.woff") format("woff"), url("sitefont/proxima-nova-bold.ttf") format("truetype"), url("sitefont/proxima-nova-bold.svg#proxima_nova_altblack") format("svg"); }
 *,
 *:before,
 *:after {
@@ -543,10 +535,32 @@ label {
     content: '';
     z-index: 1; }
 
+.two-column-listing {
+  padding: 0; }
+  .two-column-listing .tcl-content {
+    margin-top: -80px;
+    padding-top: 50px;
+    padding-left: 50px;
+    position: relative;
+    z-index: 3;
+    background-color: #ffffff; }
+    .two-column-listing .tcl-content .tclc-column .tclcc-title {
+      margin-bottom: 30px; }
+      .two-column-listing .tcl-content .tclc-column .tclcc-title h3 {
+        margin: 0;
+        font-size: 20px;
+        color: #164498; }
+    .two-column-listing .tcl-content .tclc-column .tclcc-list ul li a {
+      font-size: 17px; }
+      .two-column-listing .tcl-content .tclc-column .tclcc-list ul li a span {
+        color: #164498;
+        margin-right: 10px;
+        font-size: 20px;
+        vertical-align: middle; }
+
 .title-text-right-image {
   padding: 0 0 150px; }
   .title-text-right-image .ttri-content {
-    margin-top: -80px;
     position: relative;
     z-index: 3;
     background-color: #ffffff; }
@@ -670,30 +684,26 @@ h3 {
 .address-form .af-content .af-address {
   background-color: #ffffff;
   padding-top: 35px;
-  height: 460px;
-  font-family: 'proxima-nova-regular'; }
+  height: 460px; }
   .address-form .af-content .af-address .afd-logo {
     padding-left: 15px;
     margin-bottom: 40px; }
   .address-form .af-content .af-address .afd-info {
     padding-left: 40px; }
-.address-form .af-content .form-group {
+.address-form .form-group {
   position: relative; }
-  .address-form .af-content .form-group .form-control {
+  .address-form .form-group .form-control {
     border-radius: 0;
     font-size: 12px;
     height: 65px;
     border: none;
     box-shadow: none; }
-  .address-form .af-content .form-group .text-area {
+  .address-form .form-group .check-box {
+    margin-bottom: 15px; }
+  .address-form .form-group .text-area {
     height: 225px;
     padding-top: 22px; }
-  .address-form .af-content .form-group .linkedin-profile {
-    position: relative; }
-    .address-form .af-content .form-group .linkedin-profile i {
-      position: absolute;
-      top: 50%; }
-  .address-form .af-content .form-group .action-btn {
+  .address-form .form-group .action-btn {
     background-color: transparent;
     border: 1px solid #ffffff;
     height: 65px;
@@ -703,14 +713,36 @@ h3 {
     color: #ffffff;
     text-transform: uppercase; }
     @media (max-width: 767px) {
-      .address-form .af-content .form-group .action-btn {
+      .address-form .form-group .action-btn {
         float: none !important;
         display: table;
         margin: 20px auto 0; } }
-  .address-form .af-content .form-group span {
+  .address-form .form-group span {
     color: #ffffff;
     font-size: 14px;
     padding-left: 3px; }
+.address-form .form-action {
+  margin-bottom: 0; }
+.address-form .linkedin-profile {
+  position: relative; }
+  .address-form .linkedin-profile .lp-img {
+    position: absolute;
+    padding-top: 8px;
+    padding-left: 8px;
+    top: 50%; }
+  .address-form .linkedin-profile .lp-fc {
+    padding-left: 70px; }
+  .address-form .linkedin-profile .action-btn {
+    margin-bottom: 15px; }
+
+.footer {
+  padding: 10px; }
+  .footer .footer-menu ul li {
+    margin-right: 15px; }
+    .footer .footer-menu ul li a {
+      padding: 10px; }
+    .footer .footer-menu ul li:first-child a {
+      padding-left: 0; }
 
 .theme-000000 {
   color: #000000 !important; }
