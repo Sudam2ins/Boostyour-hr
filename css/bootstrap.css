@@ -1588,12 +1588,12 @@ pre code {
     width: 970px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .container {
     width: 1170px;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
   .container {
     width: 1470px;
   }
